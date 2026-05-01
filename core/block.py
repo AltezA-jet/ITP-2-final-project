@@ -7,3 +7,5 @@ class Block(Button):
             color=color.green,
             position=position
         )
+class GrassBlock(Block):
+    pass
