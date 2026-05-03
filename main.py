@@ -1,2 +1,7 @@
 from ursina import Ursina
-app= Ursina()
+from core.game import Game
+
+app = Ursina()
+game = Game()
+
+app.run()
