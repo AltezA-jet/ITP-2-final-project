@@ -2,6 +2,8 @@ from ui.menu import Menu
 from ui.hud import HUD
 from core.player import Player
 from core.world import World
+from ui.hotbar import Hotbar
+from core.block import GrassBlock, DirtBlock, StoneBlock
 
 
 class Game:
@@ -10,13 +12,12 @@ class Game:
 
         self.menu = Menu(self)
         self.hud = HUD()
+        self.hotbar = Hotbar(self)
+
         self.player = None
         self.world = None
 
-
         self.set_state("menu")
-
-        
 
     def set_state(self, new_state):
         self.state = new_state
@@ -24,6 +25,7 @@ class Game:
         if new_state == "menu":
             self.menu.enable()
             self.hud.disable()
+
             if self.player:
                 self.player.disable()
 
@@ -36,12 +38,15 @@ class Game:
 
             if not self.world:
                 self.world = World()
-            
 
-            # if not self.player:
-            #     self.player = Player()
-            # else:
-            #     self.player.enable()
+    def get_selected_block(self):
+        index = self.hotbar.selected_index
 
-        elif new_state == "game_over":
-            print("Game Over")
+        if index == 0:
+            return GrassBlock
+        elif index == 1:
+            return StoneBlock
+        elif index == 2:
+            return DirtBlock
+        else:
+            return GrassBlock
