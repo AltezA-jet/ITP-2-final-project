@@ -1,14 +1,14 @@
 # from ursina import Button, color
 from ursina import *
 
-class Block(Button):
+class Block(Entity):
     def __init__(self, position=(0,0,0)):
         super().__init__(
-            parent=scene,
             model='cube',
-            color=color.green,
+            texture='textures/grass',
             position=position,
-            collider='box'
+            collider='box',
+            texture_scale=(1,1)
         )
 
     def input(self, key):
