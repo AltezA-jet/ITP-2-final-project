@@ -50,5 +50,17 @@ class Game:
             return StoneBlock
         elif index == 2:
             return DirtBlock
+        elif index == 3:
+            return GrassBlock
+        elif index == 4:
+            return StoneBlock
+        elif index == 5:
+            return DirtBlock
+        elif index == 6:
+            return GrassBlock
+        elif index == 7:
+            return StoneBlock
+        elif index == 8:
+            return DirtBlock
         else:
             return GrassBlock
