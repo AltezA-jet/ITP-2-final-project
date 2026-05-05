@@ -21,8 +21,8 @@ class World:
             (-14,StoneBlock)
         ]
         for y , block_class in layers:
-            for x in range(1,100,5):
-                for z in range(1,100,5):
+            for x in range(1,100,4):
+                for z in range(1,100,4):
                     block = block_class(position=(x, y, z))
                     self.blocks.append(block)
                     

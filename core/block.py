@@ -10,14 +10,14 @@ class Block(Entity):
             game = None
         )
 
-    def input(self, key):
-        if self.hovered:
-            if key == 'left mouse down':
-                destroy(self)
+    # def input(self, key):
+    #     if self.hovered:
+    #         if key == 'left mouse down':
+    #             destroy(self)
 
-            if key == 'right mouse down':
-                block_class = Block.game.get_selected_block()
-                block_class(position=self.position + mouse.normal)
+    #         if key == 'right mouse down':
+    #             block_class = Block.game.get_selected_block()
+    #             block_class(position=self.position + mouse.normal)
 
 class GrassBlock(Block):
     def __init__(self, position=(0,0,0)):

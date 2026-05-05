@@ -34,7 +34,7 @@ class Game:
             self.hud.enable()
 
             if not self.player:
-                self.player = Player(position=(5, 4, 5))
+                self.player = Player(self, position=(5, 5, 5))
 
             if not self.world:
                 self.world = World()
