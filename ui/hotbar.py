@@ -62,6 +62,18 @@ class Hotbar(Entity):
 
             self.selected_index = i
             self.update_visual()
+            
+        elif key == 'scroll down':
+            self.selected_index += 1
+            if self.selected_index > 9:
+                self.selected_index = 0
+            self.update_visual()
+
+        elif key == 'scroll up':
+            self.selected_index -= 1
+            if self.selected_index < 0:
+                self.selected_index = 9
+            self.update_visual()
 
     def update_visual(self):
         for i, slot in enumerate(self.slots):
