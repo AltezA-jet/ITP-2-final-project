@@ -1,4 +1,5 @@
 from ursina import *
+from core.player import *
 
 class HUD(Entity):
     def __init__(self):
