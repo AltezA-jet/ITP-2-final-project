@@ -13,6 +13,7 @@ class Game:
         self.menu = Menu(self)
         self.hud = HUD()
         self.hotbar = Hotbar(self)
+        self.hotbar.disable()
 
         self.player = None
         self.world = None
@@ -32,6 +33,7 @@ class Game:
         elif new_state == "playing":
             self.menu.disable()
             self.hud.enable()
+            self.hotbar.enable()
 
             if not self.player:
                 self.player = Player(self, position=(5, 5, 5))

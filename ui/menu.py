@@ -11,16 +11,17 @@ class Menu(Entity):
         self.bg = Entity(
             parent=self,
             model='quad',
-            scale=(2, 1),
-            color=color.black66
+            texture='textures/menu',
+            scale=(2, 1)
         )
+        # self.bg.z = -1
 
        
         self.play_button = Button(
             text="Play",
             parent=self,
             scale=(0.3, 0.1),
-            y=0.2
+            y=0.0
         )
         self.play_button.on_click = self.play
 
