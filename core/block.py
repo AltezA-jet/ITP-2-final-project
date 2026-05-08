@@ -39,3 +39,20 @@ class StoneBlock(Block):
             position=position,
             texture='textures/stone'
         )
+
+class OakBlock(Block):
+    def __init__(self, position=(0,0,0)):
+        super().__init__(
+            position=position,
+            texture='textures/planks'
+        )
+
+class GlassBlock(Block):
+    def __init__(self, position=(0,0,0)):
+        super().__init__(
+            position=position,
+            texture='textures/glass'
+        )
+        self.color = color.rgba(255, 255, 255, 120)
+        self.double_sided= True
+        self.collider = 'box'

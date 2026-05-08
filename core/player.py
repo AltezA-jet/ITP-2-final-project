@@ -2,7 +2,7 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 from ursina import *
 
 class Player(FirstPersonController):
-    def __init__(self, game, position=(0, 4, 0)):
+    def __init__(self, game, position=(0, 5, 0)):
         super().__init__(position=position)
 
         self.game = game
@@ -36,7 +36,7 @@ class Player(FirstPersonController):
         self.hit_info = raycast(
             origin=camera.world_position,
             direction=camera.forward,
-            distance=5,
+            distance=7,
             ignore=[self]
         )
 

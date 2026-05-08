@@ -3,7 +3,7 @@ from ui.hud import HUD
 from core.player import Player
 from core.world import World
 from ui.hotbar import Hotbar
-from core.block import GrassBlock, DirtBlock, StoneBlock
+from core.block import GrassBlock, DirtBlock, StoneBlock, OakBlock , GlassBlock
 
 
 class Game:
@@ -36,7 +36,7 @@ class Game:
             self.hotbar.enable()
 
             if not self.player:
-                self.player = Player(self, position=(5, 5, 5))
+                self.player = Player(self, position=(5, 6, 5))
 
             if not self.world:
                 self.world = World()
@@ -51,9 +51,9 @@ class Game:
         elif index == 2:
             return DirtBlock
         elif index == 3:
-            return GrassBlock
+            return OakBlock
         elif index == 4:
-            return StoneBlock
+            return GlassBlock
         elif index == 5:
             return DirtBlock
         elif index == 6:
