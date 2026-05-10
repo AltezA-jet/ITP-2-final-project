@@ -1,4 +1,5 @@
 from ursina import *
+from ursina.shaders import unlit_shader
 
 class Block(Entity):
     def __init__(self, position=(0,0,0), texture='white_cube'):
@@ -51,8 +52,9 @@ class GlassBlock(Block):
     def __init__(self, position=(0,0,0)):
         super().__init__(
             position=position,
-            texture='textures/glass'
+            texture='textures/glass',
         )
-        self.color = color.rgba(255, 255, 255, 120)
-        self.double_sided= True
-        self.collider = 'box'
+
+        self.color = color.white
+        self.double_sided = True
+        self.shader = unlit_shader
